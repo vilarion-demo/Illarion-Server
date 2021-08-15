@@ -112,7 +112,8 @@ auto main(int argc, char *argv[]) -> int {
 
     running = true;
 
-    Logger::info(LogFacility::Other) << "Illarion is operational!" << Log::end;
+    const char serverVersion[] = SERVER_VERSION;
+    Logger::info(LogFacility::Other) << "Illarion " << serverVersion << " is operational!" << Log::end;
 
     while (running) {
         // make sure we don't block the server with processing new players...
